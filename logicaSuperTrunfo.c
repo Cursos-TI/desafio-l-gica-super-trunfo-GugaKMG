@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 int main() {
 
@@ -10,7 +11,6 @@ int main() {
    float area1 = 435000;
    float pib1 = 1000000;
    float densi1 = populacao1/area1;
-   float capita1 = pib1/populacao1;
 
    //Variáveis da segunda carta.
    char pais2[50] = "b";
@@ -19,13 +19,54 @@ int main() {
    float area2 = 535000;
    float pib2 = 1020000;
    float densi2 = populacao2/area2;
-   float capita2 = pib2/populacao2;
 
    //Declaração das variáveis que armazenam as opções que o usúario seleciona.
    int opcao1, opcao2;
 
-   //Apresentação do jogo e seleção de atributo.
-   printf("Bem-Vindo ao Super Trunfo! Selecione o primeiro atributo que deseja comparar: \n\n");
+    //Leitura do nome do pais.
+    printf("Bem-Vindo ao Super Trunfo! Digite o nome do primeiro pais:\n");
+    fgets(pais1, 30, stdin);
+    pais1[strcspn(pais1, "\n")] = 0;
+
+    //Leitura da população.
+    printf("Digite o tamanho da populacao:\n");
+    scanf(" %d", &populacao1);
+
+    //Leitura dos pontos turisticos.
+    printf("Digite quantos pontos turisticos tem na cidade:\n");
+    scanf(" %d", &pontosTuri1);
+
+    //Leitura da área da cidade.
+    printf("Digite quanto de area pertence a cidade:\n");
+    scanf(" %f", &area1);
+
+    //Leitura do pib da cidade.
+    printf("Digite o pib da cidade:\n");
+    scanf(" %f", &pib1);
+    print("\n");
+
+    //Leitura da segunda carta.
+    getchar();
+    printf("Digite o nome do segundo pais:\n");
+    fgets(pais2, 30, stdin);
+    pais2[strcspn(pais2, "\n")] = 0;
+
+    printf("Digite o tamanho da populacao:\n");
+    scanf(" %d", &populacao2);
+
+    printf("Digite quantos pontos turisticos tem na cidade:\n");
+    scanf(" %d", &pontosTuri2);
+
+    printf("Digite quanto de area pertence a cidade:\n");
+    scanf(" %f", &area2);
+
+    printf("Digite o pib da cidade:\n");
+    scanf(" %f", &pib2);
+    printf("\n");
+
+
+   //Seleção de atributo.
+   printf("Selecione o primeiro atributo que deseja comparar: \n\n");
    printf("1 - Populacao\n");
    printf("2 - Area\n");
    printf("3 - PIB\n");
