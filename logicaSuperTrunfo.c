@@ -23,7 +23,7 @@ int main() {
    //Declaração das variáveis que armazenam as opções que o usúario seleciona.
    int opcao1, opcao2;
 
-    //Leitura do nome do pais.
+    //Apresentação do jogo e leitura do nome do primeiro pais.
     printf("Bem-Vindo ao Super Trunfo! Digite o nome do primeiro pais:\n");
     fgets(pais1, 30, stdin);
     pais1[strcspn(pais1, "\n")] = 0;
